@@ -53,12 +53,10 @@ public class Main {
         int fertility = 17;
         int mortality = 8;
         int year = 0;
-        int fertilityYear = y / people * (fertility - mortality) + y;
-        System.out.println("Год " + year + " численность населения составляет: " + fertilityYear);
         while (year < 10) {
             year = year + 1;
-            fertilityYear = (fertilityYear / 1000 * 9) + fertilityYear;
-            System.out.println("Год " + year + " численность населения составляет: " + fertilityYear);
+            y = y + y / people * (fertility - mortality);
+            System.out.println("Год " + year + " численность населения составляет: " + fertility);
             // Пишем код для задачи 3
 
         }
@@ -73,7 +71,7 @@ public class Main {
         int percent = depositAmount + (depositAmount * 7) / 100;
         while (total < 12_000_000) {
             month = month + 1;
-            total = total + percent;
+            total = total + percent + depositAmount;
             System.out.println("Месяц № " + month + " Сумма накоплений = " + total);
             // Пишем код для задачи 4
 
@@ -88,7 +86,7 @@ public class Main {
         int percent = depositAmount + (depositAmount * 7) / 100;
         while (total < 12_000_000) {
             month = month + 1;
-            total = total + percent;
+            total = total + percent + depositAmount;
             if (total % 6 == 0 && month % 6 == 0) {
                 System.out.println("Месяц № " + month + " Сумма накоплений = " + total);
                 // Пишем код для задачи 5
@@ -105,7 +103,7 @@ public class Main {
         int percent = amountOfSavings + (amountOfSavings * 7) / 100;
         while (month < 108) {
             month = month + 1;
-            total = total + percent;
+            total = total + percent + amountOfSavings;
             if (amountOfSavings % 6 == 0 && month % 6 == 0) {
                 System.out.println("Месяц № " + month + " Сумма накоплений = " + total);
                 // Пишем код для задачи 6
